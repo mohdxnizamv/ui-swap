@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Honor Protocol Swap</title>
+  </head>
+  <body>
+    <!-- Navbar  -->
+    <div class="relative">
+      <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 xl:px-8">
+        <div class="flex h-16 justify-between">
+          <span class="hidden items-center md:flex">
+            <img
+              src="./image/main-logo.png"
+              alt="HP"
+              class="h-10 self-center rounded-full"
+            />
+
+            <h6 class="ml-5 text-black">Honor Protocol</h6>
+          </span>
+
+          <!-- Hamburger Button -->
+          <div class="flex">
+            <button
+              id="menu-btn"
+              type="button"
+              class="hamburger z-40 block self-center focus:outline-none md:hidden"
+            >
+              <span class="hamburger-top"></span>
+              <span class="hamburger-middle"></span>
+              <span class="hamburger-bottom"></span>
+            </button>
+          </div>
+
+          <!-- Wallet Connect -->
+          <div class="self-center">
+            <span class="sr-only">Wallet Connect</span>
+
+            <span id="prepare">
+              <button class="btn-web3" id="btn-connect">
+                <span>Connect Wallet</span>
+              </button>
+            </span>
+
+            <span id="connected" style="display: none">
+              <button class="btn-web3" id="btn-disconnect">
+                <span>Disconnect Wallet</span>
+              </button>
+            </span>
+          </div>
+
+          <!-- Mobile Menu -->
+          <div
+            id="menu"
+            class="absolute bottom-0 left-0 top-0 hidden min-h-screen w-full flex-col space-y-7 self-end bg-black/90 py-1 pl-12 pt-40 uppercase"
+          >
+            <a href="./dapps.html" class="hover:text-sky-500">Trader</a>
+            <a href="./staking.html" class="hover:text-sky-500">Miner</a>
+            <a href="./mintnft.html" class="hover:text-sky-500">Farmer</a>
+            <a href="#" class="hover:text-sky-500">Chart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="py-28">
+      <div class="container mx-auto lg:max-w-md xl:max-w-md">
+        <div
+          class="rounded-[11px] bg-transparent p-1 drop-shadow-lg-shadow sm:w-[mx-auto] xl:w-[430px]"
+        >
+          <div
+            class="flex-col rounded-[11px] bg-gradient-to-r from-gray-100 to-gray-300 p-3 sm:w-[mx-auto] xl:w-[420px]"
+          >
+            <div class="grid-cols-2 space-x-24 text-center pt-3">
+              <span
+                class="flex-col rounded-full py-1.5 px-5 bg-black text-white"
+                >Swap</span
+              >
+
+              <span class="flex-col">Buy/Sell</span>
+            </div>
+
+            <div class="grid-cols-2 space-x-24 text-center pt-20">
+              <span class="flex-col">Your Send</span>
+
+              <span class="flex-col">Balance : BNB 40 </span>
+            </div>
+
+            <div class="text-center pt-3">
+              <button
+                class="w-52 rounded-full border-none px-5 bg-white py-4 text-xs text-black placeholder-gray-500 ring-1 ring-gray-300 focus:ring-2 focus:ring-gray-500"
+              >
+                <div class="grid-col-2 mx-auto space-x-24">
+                  <span class="flex-col">0.0</span>
+
+                  <span class="flex-col">BNB</span>
+                </div>
+              </button>
+            </div>
+
+            <div class="grid-cols-2 space-x-24 text-center pt-20">
+              <span class="flex-col">Your Get</span>
+
+              <span class="flex-col">Balance : BNB 25 </span>
+            </div>
+
+            <div class="text-center pt-3">
+              <button
+                class="w-52 rounded-full border-none px-5 bg-white py-4 text-xs text-black placeholder-gray-500 ring-1 ring-gray-300 focus:ring-2 focus:ring-gray-500"
+              >
+                <div class="grid-col-2 mx-auto space-x-24">
+                  <span class="flex-col">0.0</span>
+
+                  <span class="flex-col">BTC</span>
+                </div>
+              </button>
+            </div>
+
+            <div class="text-center pt-10">
+              <button
+                class="w-32 rounded-full border-none px-5 py-4 uppercase font-normal bg-black text-white"
+              >
+                Swap Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

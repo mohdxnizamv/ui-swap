@@ -1,0 +1,167 @@
+/* DM Sans Fonts */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+/* Black Ops One */
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    @apply images-honor leading-relaxed text-white bg-black/60 sm:text-sm md:text-sm lg:text-base xl:text-base;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Black Ops One";
+    @apply text-2xl leading-relaxed sm:text-lg;
+  }
+  h6 {
+    font-family: "Black Ops One";
+    @apply text-lg;
+  }
+}
+
+@layer components {
+  .btn-web3 {
+    @apply relative rounded-3xl bg-black px-4 py-2 text-center font-medium capitalize text-white;
+  }
+  .btn {
+    @apply relative rounded-3xl bg-gradient-to-l from-softGreen to-black/10 px-7 py-4 text-center capitalize text-white hover:bg-gradient-to-r sm:text-sm md:text-sm lg:text-sm xl:text-base;
+  }
+  .btn2 {
+    @apply relative rounded-xl bg-gradient-to-r from-softGreen px-3 py-2 uppercase text-white hover:text-black;
+  }
+  .btn3 {
+    @apply relative rounded-3xl bg-gradient-to-l from-softGreen to-black/10 px-7 py-4 text-center text-sm capitalize text-white hover:bg-gradient-to-r;
+  }
+  .primary-btn {
+    @apply w-32 rounded-xl bg-black/40 py-3 text-sm  hover:bg-black/50;
+  }
+  .small-btn {
+    @apply rounded-lg bg-black/40 px-2 py-1.5 text-xs font-bold hover:bg-black/50;
+  }
+}
+
+@layer components {
+  .images-honor {
+    @apply bg-[url('./image/wallpaper-honor.jpg')];
+  }
+
+  .box-box {
+    @apply flex flex-col items-center justify-center gap-3 rounded-[32px] border bg-gradient-to-l from-green to-black/10 p-1.5 drop-shadow-xl-shadow hover:bg-gradient-to-r sm:w-[mx-auto] md:w-[mx-auto] lg:w-[550px] xl:w-[460px];
+  }
+
+  .box-staking {
+    @apply flex flex-col items-center gap-3 rounded-[32px] border bg-gradient-to-l from-green to-black/10 p-1.5 drop-shadow-xl-shadow hover:bg-gradient-to-r sm:w-[mx-auto] lg:mx-auto lg:w-[450px] xl:w-[450px];
+  }
+  .roadmap-section {
+    @apply mx-auto my-7 block max-w-xl space-y-3 rounded-xl bg-gradient-to-r from-softGreen p-2 drop-shadow-xl-shadow;
+  }
+
+  .footer {
+    @apply mx-auto max-w-7xl px-1 sm:text-sm md:text-sm lg:text-sm xl:text-base;
+  }
+
+  .footer-footer {
+    @apply grid grid-cols-1 gap-5 px-0.5 pt-10 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2;
+  }
+}
+
+@layer components {
+  #modalContainer {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 10000;
+    font-family: "Black Ops One";
+    text-align: center;
+  }
+
+  #alertBox {
+    position: relative;
+    align-self: center;
+    border-radius: 8px;
+    width: 150px;
+    min-height: 5%;
+    margin-top: 100%;
+    border: 3px solid #ff0404;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-repeat: no-repeat;
+    background-position: 20px 30px;
+  }
+
+  #modalContainer > #alertBox {
+    position: fixed;
+  }
+
+  #alertBox #closeBtn {
+    display: block;
+    position: relative;
+    margin: 5px auto;
+    padding: 7px;
+    border: 0 none;
+    width: 70px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-decoration: none;
+  }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 34px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: whitesmoke;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
